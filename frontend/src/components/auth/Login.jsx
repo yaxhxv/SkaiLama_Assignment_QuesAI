@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 import QuesLogo from "../../assets/QuesLogo1.png";
-import purpleLogo from "../../assets/purpleLogo.png";
+import purpleLogo from "../../assets/PurpleLogo.png";
 import authService from "../../services/authService";
 
 const Login = () => {
