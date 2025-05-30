@@ -1,0 +1,47 @@
+.projects-page {
+  padding: 2rem;
+}
+
+.projects-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.projects-title-row h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #6c2bd9;
+  margin: 0;
+}
+
+.create-project-btn {
+  background-color: #2d1846;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.create-project-btn:hover {
+  background-color: #231235;
+}
+
+.create-project-btn span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+} 

@@ -1,0 +1,177 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.transcript-modal {
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.transcript-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.transcript-modal .modal-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.transcript-modal .modal-title h2 {
+  font-size: 24px;
+  color: #111827;
+  margin: 0;
+}
+
+.transcript-modal .edit-button {
+  background: #6366F1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.transcript-modal .edit-button:hover {
+  background: #4F46E5;
+}
+
+.transcript-modal .close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6B7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.transcript-modal .close-button:hover {
+  background: #F3F4F6;
+  color: #111827;
+}
+
+.transcript-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.transcript-modal label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.transcript-modal .speaker-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.transcript-modal .speaker-input:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.transcript-modal .transcript-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 300px;
+  transition: border-color 0.2s;
+}
+
+.transcript-modal .transcript-textarea:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.transcript-modal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.transcript-modal .cancel-btn,
+.transcript-modal .save-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.transcript-modal .cancel-btn {
+  background: #F3F4F6;
+  border: none;
+  color: #4B5563;
+}
+
+.transcript-modal .cancel-btn:hover {
+  background: #E5E7EB;
+}
+
+.transcript-modal .save-btn {
+  background: #6366F1;
+  border: none;
+  color: white;
+}
+
+.transcript-modal .save-btn:hover {
+  background: #4F46E5;
+}
+
+/* View mode styles */
+.transcript-modal .transcript-view {
+  padding: 20px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.transcript-modal .speaker-name {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.transcript-modal .transcript-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4B5563;
+  white-space: pre-wrap;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 16px;
+} 
