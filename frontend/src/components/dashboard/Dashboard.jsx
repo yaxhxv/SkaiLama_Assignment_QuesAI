@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import "./Dashboard.css";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoNotificationsOutline } from "react-icons/io5";
-import purpleLogo from "../../assets/purpleLogo.png";
+import purpleLogo from "../../assets/PurpleLogo.png";
 
 const Dashboard = () => {
   return (
