@@ -100,14 +100,41 @@ function ProjectDetail() {
     }
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id, name) => {
     try {
+      // Show confirmation dialog
+      if (
+        !window.confirm(
+          `Are you sure you want to delete "${name}"? This action cannot be undone.`
+        )
+      ) {
+        return;
+      }
+
       setIsLoading(true);
       setError(null);
+
+      // Delete from backend
       await podcastService.deletePodcast(id);
+
+      // Update UI
       setFiles((prevFiles) => prevFiles.filter((file) => file.id !== id));
+
+      // Show success message
+      const successMessage = document.createElement("div");
+      successMessage.className = "success-message";
+      successMessage.textContent = "Podcast deleted successfully";
+      document.body.appendChild(successMessage);
+
+      // Remove success message after 3 seconds
+      setTimeout(() => {
+        successMessage.remove();
+      }, 3000);
     } catch (err) {
-      setError(err.message || "Failed to delete podcast");
+      console.error("Delete error:", err);
+      setError(
+        err.response?.data?.error || err.message || "Failed to delete podcast"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -298,7 +325,7 @@ function ProjectDetail() {
                           </button>
                           <button
                             className="delete-btn"
-                            onClick={() => handleDelete(file.id)}
+                            onClick={() => handleDelete(file.id, file.name)}
                             disabled={isLoading}
                           >
                             Delete
